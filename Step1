@@ -1,0 +1,7 @@
+download.file(url = "https://github.com/michbur/dpcReport_data/archive/master.zip", 
+              destfile = "dpcReport_data.zip")
+unzip("dpcReport_data.zip", exdir = getwd())
+file.remove("dpcReport_data.zip")
+# read a chosen file using dpcR package
+library(dpcR)
+read_dpcr(input = "dpcR_data-master/QX200.csv", format = "QX200")
